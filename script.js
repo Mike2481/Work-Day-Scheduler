@@ -1,9 +1,21 @@
 var currentDate = moment(). format("dddd, MMMM Do");
-var currentDay = $("#currentDay");
-var currentHour = moment().format("H");
+var currentHour = moment().hour();
 
 
-currentDay.text = currentDate;
+$("#currentDay").text(currentDate);
+console.log(currentHour)
+
+var rowHour = parseInt($(this).attr('id').split('-')[1])
+//set local storage by declaring key and value variables
+// key -> .parent();
+// value -> .siblings(".description")
+
+//getItem
+
+$("row-9 .description").val(localStorage.getItem("row-9"));
+
+
+
 
 console.log(currentDay);
 
